@@ -34,7 +34,7 @@ hist(stepsaday$steps, main ="Total Steps per Day", col="orange", xlab="Number of
 mean(stepsaday$steps)
 median(stepsaday$steps)
 ```
-![ ](RepData_PeerAssessment1/instructions_fig/fig1-Total steps per Day.png) 
+![](https://github.com/prishak/RepData_PeerAssessment1/blob/master/instructions_fig/fig1-Total%20steps%20per%20Day.png) 
 
 
 
@@ -55,7 +55,7 @@ stepsainterval <- aggregate(steps~interval,activity,mean)
 plot(stepsainterval$interval,stepsainterval$steps,type="l",col="dark red",xlab="INTERVAL",ylab="Ave. Number of Steps",main="Average Number of Steps per Interval")
 stepsainterval[which.max(stepsainterval$steps),1]
 ```
-![](RepData_PeerAssessment1/instructions_fig/fig2-Average number of steps per interval.png)
+![](https://github.com/prishak/RepData_PeerAssessment1/blob/master/instructions_fig/fig2-Average%20number%20of%20steps%20per%20interval.png)
 
 ### Imputing missing values
 * Calculate the total number of missing values in the dataset (i.e. the total number of rows with NAs)
@@ -80,7 +80,7 @@ steps_by_day_i <- aggregate(steps ~ date, new_data, sum)
 ```{r}
 hist(steps_by_day_i$steps, main = paste("Total Steps per Day"), col="brown", xlab="Number of Steps")
 ```
-![](RepData_PeerAssessment1/instructions_fig/fig-3.png)
+![](https://github.com/prishak/RepData_PeerAssessment1/blob/master/instructions_fig/fig-3.png)
 
 * Histogram to show difference
 ```{r, echo=TRUE}
@@ -90,7 +90,7 @@ hist(stepsaday$steps, main ="Total Steps per Day", col="orange", xlab="Number of
 legend("topright", c("Imputed", "Non-imputed"), col=c("brown", "orange"), lwd=5,bty= "o")
 
 ```
-![](RepData_PeerAssessment1/instructions_fig/fig3.total steps per day.png)
+![](https://github.com/prishak/RepData_PeerAssessment1/blob/master/instructions_fig/fig3.total%20steps%20per%20day.png)
 
 * Mean and Median of non imputed data:
 
@@ -131,4 +131,4 @@ library(lattice)
 xyplot(stepsinterval1$steps ~ stepsinterval1$interval|stepsinterval1$dow, main="AVERAGE STEPS PER DAY BY INTERVAL",xlab="INTERVAL", ylab="STEPS",layout=c(1,2), type="l")
 ```
 
-![](RepData_PeerAssessment1/instructions_fig/fig4-agv steps per day by interval.png)
+![](https://github.com/prishak/RepData_PeerAssessment1/blob/master/instructions_fig/fig4-agv%20steps%20per%20day%20by%20interval.png)
